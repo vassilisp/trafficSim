@@ -5,10 +5,19 @@ class GridArea(object):
 
     m_grid = None
 
+    m_xDimension = None
+    m_yDimension = None
+
     def __init__(self, xDimension, yDimension):
         self.m_grid  = [[0 for y in xrange(yDimension)] for x in range(xDimension)] 
 
 
+    def getXDimension(self):
+        return m_xDimension
+    
+    def getYDimension(self):
+        return m_YDimension   
+    
     def updateGrid(self, oldPos, newPos):
         gridReset(oldPos)
         gridSet(newPos)
